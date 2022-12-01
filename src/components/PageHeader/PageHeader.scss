@@ -1,0 +1,24 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/reset' as *;
+
+.header{
+
+    &__wrapper{
+        margin-top: 1rem;
+    }
+
+    &__card{
+        margin-left: 2.375rem;
+    }
+    
+    &__logo-wrapper{
+
+    }
+
+    &__logo{
+        height: 112px;
+        width: 248px;
+    }
+}
