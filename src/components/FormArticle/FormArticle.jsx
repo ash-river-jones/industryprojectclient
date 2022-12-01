@@ -1,26 +1,45 @@
 import './FormArticle.scss';
-// import imgTop from '../../assets/Images/form-article-top.png'
-// import imgBottom from '../../assets/Images/form-article-bottom.png'
+import articleImage1 from '../../assets/Images/image_2.jpg'
+import articleImage2 from '../../assets/Images/photo_1.png'
+import articleImage3 from '../../assets/Images/photo_2.png'
+import articleImage4 from '../../assets/Images/photo_3.png'
 
 export default function FormArticleCard() {
 	return (
 		<>
 			<section className='form-article'>
-				<div className='form-article__top'>
-					<div className='form-article__top--wrapper'>
-						<img src='' alt="headshot of bookkeeper" className='form-article__top--img'/>
-						<div className='form-article__top--message'>
-							<h3 className='form-article__top--title'>Get a Free Month of Bookkeeping On Us</h3>
-							<p className='form-article__top--body'>Bench takes bookkeeping off your hands, paring you with a real, human bookkeeper at a price you can afford. Try our services for free before deciding if we're the right fit for you.</p>
+				<div className='form-article__section'>
+					<div className='form-article__section--wrapper'>
+						<img src={articleImage1} alt="headshot of bookkeeper" className='form-article__section--img'/>
+						<div className='form-article__section--message'>
+							<p className='form-article__section--body-large-'>Bench takes bookkeeping off your hands, pairing you with a real, human bookkeeper. Try our services for free deciding if we’re the right fit for you.</p>
 						</div>
 					</div>
 				</div>
-				<div className='form-article__bottom'>
-					<div className='form-article__bottom--wrapper'>
-						<img src='' alt="" className='form-article__bottom--img'/>
-						<div className='form-article__bottom--message'>
-							<h3 className='form-article__bottom--title'>Text</h3>
-							<p className='form-article__bottom--body'>Text</p>
+				<div className='form-article__section'>
+					<div className='form-article__section--wrapper'>
+						<img src={articleImage2} alt="headshot of bookkeeper" className='form-article__section--img'/>
+						<div className='form-article__section--message'>
+							<h1 className='form-article__section--title'>We get you set up</h1>
+							<p className='form-article__section--body-small'>First, we’ll introduce you to a dedicated bookkeeper. They’ll get to know your business, show you how Bench works, and gather everything they need from you.</p>
+						</div>
+					</div>
+				</div>
+				<div className='form-article__section'>
+					<div className='form-article__section--wrapper'>
+						<img src={articleImage3} alt="headshot of bookkeeper" className='form-article__section--img'/>
+						<div className='form-article__section--message'>
+							<h1 className='form-article__section--title'>We do your booking</h1>
+							<p className='form-article__section--body-small'>Each month, your bookkeeper organizes your business transactions and prepares financial statements. If they need anything from you, they’ll get in touch.</p>
+						</div>
+					</div>
+				</div>
+				<div className='form-article__section'>
+					<div className='form-article__section--wrapper'>
+						<img src={articleImage4} alt="headshot of bookkeeper" className='form-article__section--img'/>
+						<div className='form-article__section--message'>
+							<h1 className='form-article__section--title'>We deliver tax-ready financials</h1>
+							<p className='form-article__section--body-small'>Track business health with monthly financial reporting. At tax time, we send a package with everything you need to file. Or, let us do it for you with our Premium plan.</p>
 						</div>
 					</div>
 				</div>

@@ -201,103 +201,105 @@ export default function Form() {
 	return (
 		<>
 			<div className='form-wrapper'>
-				<PageHeader />
-				<main className='form-main'>
-					<form onSubmit={handelFormSubmit}>
-						{!formPartOneDone && (
-							<section>
-								<section className='company-size'>
-									<div className="company__info">
-										<h1>Tell Us About Your Business</h1>
-										<div className="company__info--input">
-											<label>1. Company Size</label>
-											<div className="company__info--input__list">
-												<input type="radio" id="size-1" className="company__info--input__radio" name="size" value="1" onChange={(e) => {setCompanySize(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="size-1">1</label>
-												<input type="radio" id="size-2" className="company__info--input__radio" name="size" value="2-5" onChange={(e) => {setCompanySize(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="size-2">2-5</label>
-												<input type="radio" id="size-3" className="company__info--input__radio" name="size" value="6-10" onChange={(e) => {setCompanySize(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="size-3">6-10</label>
-												<input type="radio" id="size-4" className="company__info--input__radio" name="size" value="11-25" onChange={(e) => {setCompanySize(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="size-4">11-25</label>
-												<input type="radio" id="size-5" className="company__info--input__radio" name="size" value="25+" onChange={(e) => {setCompanySize(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="size-5">25+</label>
-												<input type="radio" id="size-6" className="company__info--input__radio" name="size" value="not sure" onChange={(e) => {setCompanySize(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="size-6">I'm not sure</label>
-											</div>
-											<label>2. Monthly Revenue</label>
-											<div className="company__info--input__list">
-												<input type="radio" id="rev-1" className="company__info--input__radio" name="revenue" value="0" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="rev-1">$0 (Pre-revenue)</label>
-												<input type="radio" id="rev-2"className="company__info--input__radio" name="revenue" value="$1-$1,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="rev-2">$1-$1,000</label>
-												<input type="radio" id="rev-3" className="company__info--input__radio" name="revenue" value="$1,000-$10,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="rev-3">$1,000-$10,000</label>
-												<input type="radio" id="rev-4" className="company__info--input__radio" name="revenue" value="$10,000-$100,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="rev-4">$10,000-$100,000</label>
-												<input type="radio" id="rev-5" className="company__info--input__radio" name="revenue" value="more than $100,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="rev-5">more than $100,000</label>
-											</div>
-											<label>3. Last Tax Return</label>
-											<div className="company__info--input__list">
-												<input type="radio" id="year-1" className="company__info--input__radio" name="year" value="2021" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="year-1">Tax Year 2021</label>
-												<input type="radio" id="year-2" className="company__info--input__radio" name="year" value="2020" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="year-2">Tax Year 2020</label>
-												<input type="radio" id="year-3" className="company__info--input__radio" name="year" value="2019" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="year-3">Tax Year 2019 or prior</label>
-												<input type="radio" id="year-4" className="company__info--input__radio" name="year" value="n/a" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
-												<label className="company__info--input__label" htmlFor="year-4">My business is new, I'm not sure.</label>
+				<div className='form-main'>
+					<PageHeader />
+					<main>
+						<form onSubmit={handelFormSubmit}>
+							{!formPartOneDone && (
+								<section>
+									<section className='company-size'>
+										<div className="company__info">
+											<h1>Tell Us About Your Business</h1>
+											<div className="company__info--input">
+												<label>1. Company Size</label>
+												<div className="company__info--input__list">
+													<input type="radio" id="size-1" className="company__info--input__radio" name="size" value="1" onChange={(e) => {setCompanySize(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="size-1">1</label>
+													<input type="radio" id="size-2" className="company__info--input__radio" name="size" value="2-5" onChange={(e) => {setCompanySize(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="size-2">2-5</label>
+													<input type="radio" id="size-3" className="company__info--input__radio" name="size" value="6-10" onChange={(e) => {setCompanySize(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="size-3">6-10</label>
+													<input type="radio" id="size-4" className="company__info--input__radio" name="size" value="11-25" onChange={(e) => {setCompanySize(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="size-4">11-25</label>
+													<input type="radio" id="size-5" className="company__info--input__radio" name="size" value="25+" onChange={(e) => {setCompanySize(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="size-5">25+</label>
+													<input type="radio" id="size-6" className="company__info--input__radio" name="size" value="not sure" onChange={(e) => {setCompanySize(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="size-6">I'm not sure</label>
+												</div>
+												<label>2. Monthly Revenue</label>
+												<div className="company__info--input__list">
+													<input type="radio" id="rev-1" className="company__info--input__radio" name="revenue" value="0" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="rev-1">$0 (Pre-revenue)</label>
+													<input type="radio" id="rev-2"className="company__info--input__radio" name="revenue" value="$1-$1,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="rev-2">$1-$1,000</label>
+													<input type="radio" id="rev-3" className="company__info--input__radio" name="revenue" value="$1,000-$10,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="rev-3">$1,000-$10,000</label>
+													<input type="radio" id="rev-4" className="company__info--input__radio" name="revenue" value="$10,000-$100,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="rev-4">$10,000-$100,000</label>
+													<input type="radio" id="rev-5" className="company__info--input__radio" name="revenue" value="more than $100,000" onChange={(e) => {setMonthyRevenue(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="rev-5">more than $100,000</label>
+												</div>
+												<label>3. Last Tax Return</label>
+												<div className="company__info--input__list">
+													<input type="radio" id="year-1" className="company__info--input__radio" name="year" value="2021" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="year-1">Tax Year 2021</label>
+													<input type="radio" id="year-2" className="company__info--input__radio" name="year" value="2020" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="year-2">Tax Year 2020</label>
+													<input type="radio" id="year-3" className="company__info--input__radio" name="year" value="2019" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="year-3">Tax Year 2019 or prior</label>
+													<input type="radio" id="year-4" className="company__info--input__radio" name="year" value="n/a" onChange={(e) => {setLastTaxReturn(e.target.value)}}></input>
+													<label className="company__info--input__label" htmlFor="year-4">My business is new, I'm not sure.</label>
+												</div>
 											</div>
 										</div>
-									</div>
-								</section>
-								<section className='contact-info'>
-									<div className='c-info'>
-											<h2 className='c-info__subheader'>Contact</h2>
-											<label htmlFor="companyname" className='c-info__form-label'>1. Company Name
-												<input type="text" className='c-info__form-input-name' value={companyName} onChange={(e) => {setCompanyName(e.target.value)}}/>
-											</label>
-											<label htmlFor="" className='c-info__form-label'>2. Phone Number
-												<input type="text" className='c-info__form-input-phone' value={phoneNumber} onChange={(e) => {setPhoneNumber(e.target.value)}}/>
-											</label>
-											<div className='c-info__wrper-labels'>
-												<label htmlFor="" className='c-info__form-label'>3. Country
-													<input type="text" className='c-info__form-input-country' value={country} onChange={(e) => {setCountry(e.target.value)}}/>
+									</section>
+									<section className='contact-info'>
+										<div className='c-info'>
+												<h2 className='c-info__subheader'>Contact</h2>
+												<label htmlFor="companyname" className='c-info__form-label'>1. Company Name
+													<input type="text" className='c-info__form-input-name' value={companyName} onChange={(e) => {setCompanyName(e.target.value)}}/>
 												</label>
-												<label htmlFor="" className='c-info__form-label'>3. Time zone
-													<input type="text" className='c-info__form-input-time' value={timeZone} onChange={(e) => {setTimeZone(e.target.value)}}/>
+												<label htmlFor="" className='c-info__form-label'>2. Phone Number
+													<input type="text" className='c-info__form-input-phone' value={phoneNumber} onChange={(e) => {setPhoneNumber(e.target.value)}}/>
 												</label>
-											</div>
-											<div onClick={handelFormPartOneDone}><Btn text='Next' class_name='account_btn'/></div>
-									</div>
+												<div className='c-info__wrper-labels'>
+													<label htmlFor="" className='c-info__form-label'>3. Country
+														<input type="text" className='c-info__form-input-country' value={country} onChange={(e) => {setCountry(e.target.value)}}/>
+													</label>
+													<label htmlFor="" className='c-info__form-label'>3. Time zone
+														<input type="text" className='c-info__form-input-time' value={timeZone} onChange={(e) => {setTimeZone(e.target.value)}}/>
+													</label>
+												</div>
+												<div onClick={handelFormPartOneDone}><Btn text='Next' class_name='account_btn'/></div>
+										</div>
+									</section>
 								</section>
-							</section>
-						)}
-						{formPartOneDone && (
-							<section className='account-form'>
-								<h1 className='account_title'>Create your bench account</h1>
-								<label htmlFor="first_name" className='account_label'> First Name
-									<input type="text" name='first_name' id='first_name' className='account_input' value={firstName} onChange={(e) => {setFirstName(e.target.value)}}/>
-									<div></div>
-								</label>
-								<label htmlFor="last_name" className='account_label'> Last Name
-									<input type="text"name='last_name' id='last_name' className='account_input' value={lastName} onChange={(e) => {setLastName(e.target.value)}}/>
-									<div></div>
-								</label>
-								<label htmlFor="email" className='account_label'> Email
-									<input type="email" name='email' id='email' className='account_input' value={email} onChange={(e) => {setEmail(e.target.value)}}/>
-									<div></div>
-								</label>
-								<label htmlFor="password" className='account_label'> Password
-									<input type="password" name='password' id='password' className='account_input' value={password} onChange={(e) => {setPassword(e.target.value)}}/>
-									<div></div>
-								</label>
-								<div onClick={handelFormPartTwoBack}><Btn text='Next' class_name='account_btn'/></div>
-							</section>
-						)}
-					</form>
-				</main>
+							)}
+							{formPartOneDone && (
+								<section className='account-form'>
+									<h1 className='account_title'>Create your bench account</h1>
+									<label htmlFor="first_name" className='account_label'> First Name
+										<input type="text" name='first_name' id='first_name' className='account_input' value={firstName} onChange={(e) => {setFirstName(e.target.value)}}/>
+										<div></div>
+									</label>
+									<label htmlFor="last_name" className='account_label'> Last Name
+										<input type="text"name='last_name' id='last_name' className='account_input' value={lastName} onChange={(e) => {setLastName(e.target.value)}}/>
+										<div></div>
+									</label>
+									<label htmlFor="email" className='account_label'> Email
+										<input type="email" name='email' id='email' className='account_input' value={email} onChange={(e) => {setEmail(e.target.value)}}/>
+										<div></div>
+									</label>
+									<label htmlFor="password" className='account_label'> Password
+										<input type="password" name='password' id='password' className='account_input' value={password} onChange={(e) => {setPassword(e.target.value)}}/>
+										<div></div>
+									</label>
+									<div onClick={handelFormPartTwoBack}><Btn text='Next' class_name='account_btn'/></div>
+								</section>
+							)}
+						</form>
+					</main>
+				</div>
 				<article className='form-article'>
 					<FormArticle />
 				</article>
