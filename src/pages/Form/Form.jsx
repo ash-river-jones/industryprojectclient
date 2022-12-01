@@ -3,7 +3,14 @@ import "../../components/CompanySize/CompanySize.scss";
 import "../../components/ContactInfo/ContactInfo.scss";
 import "../../components/AccountForm/AccountForm.scss";
 import Btn from "../../components/Btn/Btn";
+
 import PageHeader from "../../components/PageHeader/PageHeader";
+
+
+// import ContactInfo from '../../components/ContactInfo/ContactInfo';
+// import CompanySize from '../../components/CompanySize/CompanySize';
+// import AccountForm from '../../components/AccountForm/AccountForm';
+import backIcon from '../../assets/Icon/back_button.svg';
 
 import FormArticle from "../../components/FormArticle/FormArticle";
 
@@ -669,10 +676,80 @@ export default function Form() {
                     <Btn text="Next" class_name="account_btn" />
                   </div>
                 </section>
-              )}
-            </form>
-          </main>
-        </div>
+              </section>
+            )}
+            {formPartOneDone && (
+              <section className="account-form">
+                <h1 className="account_title">Create your bench account</h1>
+                <label htmlFor="first_name" className="account_label">
+                  {" "}
+                  First Name
+                  <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    className="account_input"
+                    value={firstName}
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                    }}
+                  />
+                  <div></div>
+                </label>
+                <label htmlFor="last_name" className="account_label">
+                  {" "}
+                  Last Name
+                  <input
+                    type="text"
+                    name="last_name"
+                    id="last_name"
+                    className="account_input"
+                    value={lastName}
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }}
+                  />
+                  <div></div>
+                </label>
+                <label htmlFor="email" className="account_label">
+                  {" "}
+                  Email
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="account_input"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                  <div></div>
+                </label>
+                <label htmlFor="password" className="account_label">
+                  {" "}
+                  Password
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    className="account_input"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }}
+                  />
+                  <div></div>
+                </label>
+                <div onClick={handelFormPartTwoBack} className='form_btn_container'>
+					<button className="btn_back"></button>
+                  	<Btn text="Next" class_name="account_btn" />
+                </div>
+              </section>
+            )}
+          </form>
+        </main>
+
         <article className="form-article">
           <FormArticle />
         </article>
