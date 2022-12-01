@@ -160,8 +160,7 @@ export default function Form() {
       alert("The required information has not been provided");
     } else {
       console.log(formData);
-      alert("Welcome to Bench Accounting -- Form data has been received");
-      navigate("/");
+      navigate("/welcome");
     }
   };
 
@@ -597,7 +596,7 @@ export default function Form() {
                           </option>
                         </select>
                       </label>
-            <div onClick={handelFormPartOneDone}><Btn text='Next' class_name='account_btn'/></div>
+            <div><Btn onClick={handelFormPartOneDone} text='Next' class_name='account_btn'/></div>
                       {/* </form> */}
                     </div>
                   </section>
@@ -666,9 +665,9 @@ export default function Form() {
                     />
                     <div></div>
                   </label>
-                  <div onClick={handelFormPartTwoBack} className='form_btn_container'>
-                    <button className="btn_back"></button>
-                    <Btn text="Next" class_name="account_btn" />
+                  <div className='form_btn_container'>
+                    <button className="btn_back" onClick={handelFormPartTwoBack}></button>
+                    <Btn onClick={() => {navigate('/welcome')}} text="Next" class_name="account_btn" />
                   </div>
                 </section>
               )}

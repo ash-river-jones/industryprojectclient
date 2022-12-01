@@ -35,7 +35,7 @@ export default function Welcome(){
             </div>
             <div className="welcome_btn_container">
                 <span className='welcome_btn_span'>Ready for a chat</span>
-                <Btn text='Link to business account' class_name='welcome_btn'/>
+                <Btn onClick={()=>{alert("This compnent has not yet been built by your amazing web dev team")}} text='Link to business account' class_name='welcome_btn'/>
             </div>
         </div>
     );
