@@ -513,10 +513,11 @@ export default function Form() {
                               id="radio1"
                               name="selector"
                               className="c-info__selector-item-radio"
-                              checked
                               onChange={(e) => {
                                 setCountry(e.target.value);
                               }}
+                              value="Canada"
+                              checked={country === "Canada" ? true : false}
                             />
                             <label
                               htmlFor="radio1"
@@ -531,9 +532,11 @@ export default function Form() {
                               id="radio2"
                               name="selector"
                               className="c-info__selector-item-radio"
+                              value="US"
                               onChange={(e) => {
                                 setCountry(e.target.value);
                               }}
+                              checked={country === "US" ? true : false}
                             />
                             <label
                               htmlFor="radio2"
