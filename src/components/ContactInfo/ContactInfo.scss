@@ -15,11 +15,14 @@
         // padding-left: 1rem;
         padding-bottom: .5rem;
         padding-top: 2rem;
+        @include form-subheader;
+        font-weight: 700;
     }
 
     &__paragraph {
         padding-top: .5rem;
         width: 50%;
+        @include form-body;
     }
 
     &__form-label {
