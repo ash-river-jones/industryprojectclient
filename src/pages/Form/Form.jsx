@@ -205,9 +205,10 @@ export default function Form() {
                 <section>
                   <section className="company-size">
                     <div className="company__info">
-                      <h1>Tell Us About Your Business</h1>
+                      <h1 className="company__info--header">Tell Us About Your Business</h1>
                       <div className="company__info--input">
                         <label>1. Company Size</label>
+                        <p className="c-info__paragraph">Select number of owners, employees, and contractors</p>
                         <div className="company__info--input__list">
                           <input
                             type="radio"
@@ -215,6 +216,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="size"
                             value="1"
+                            checked={companySize === "1" ? true : false}
                             onChange={(e) => {
                               setCompanySize(e.target.value);
                             }}
@@ -231,6 +233,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="size"
                             value="2-5"
+                            checked={companySize === "2-5" ? true : false}
                             onChange={(e) => {
                               setCompanySize(e.target.value);
                             }}
@@ -247,6 +250,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="size"
                             value="6-10"
+                            checked={companySize === "6-10" ? true : false}
                             onChange={(e) => {
                               setCompanySize(e.target.value);
                             }}
@@ -261,6 +265,7 @@ export default function Form() {
                             type="radio"
                             id="size-4"
                             className="company__info--input__radio"
+                            checked={companySize === "11-25" ? true : false}
                             name="size"
                             value="11-25"
                             onChange={(e) => {
@@ -277,6 +282,7 @@ export default function Form() {
                             type="radio"
                             id="size-5"
                             className="company__info--input__radio"
+                            checked={companySize === "25+" ? true : false}
                             name="size"
                             value="25+"
                             onChange={(e) => {
@@ -294,6 +300,7 @@ export default function Form() {
                             id="size-6"
                             className="company__info--input__radio"
                             name="size"
+                            checked={companySize === "not sure" ? true : false}
                             value="not sure"
                             onChange={(e) => {
                               setCompanySize(e.target.value);
@@ -307,6 +314,7 @@ export default function Form() {
                           </label>
                         </div>
                         <label>2. Monthly Revenue</label>
+                        <p className="c-info__paragraph">Select average monthly revenue before deductions</p>
                         <div className="company__info--input__list">
                           <input
                             type="radio"
@@ -314,6 +322,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="revenue"
                             value="0"
+                            checked={monthyRevenue === 0 ? true : false}
                             onChange={(e) => {
                               setMonthyRevenue(e.target.value);
                             }}
@@ -330,6 +339,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="revenue"
                             value="$1-$1,000"
+                            checked={monthyRevenue === "$1-$1,000" ? true : false}
                             onChange={(e) => {
                               setMonthyRevenue(e.target.value);
                             }}
@@ -345,6 +355,7 @@ export default function Form() {
                             id="rev-3"
                             className="company__info--input__radio"
                             name="revenue"
+                            checked={monthyRevenue === "$1,000-$10,000" ? true : false}
                             value="$1,000-$10,000"
                             onChange={(e) => {
                               setMonthyRevenue(e.target.value);
@@ -362,6 +373,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="revenue"
                             value="$10,000-$100,000"
+                            checked={monthyRevenue === "$10,000-$100,000" ? true : false}
                             onChange={(e) => {
                               setMonthyRevenue(e.target.value);
                             }}
@@ -378,6 +390,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="revenue"
                             value="more than $100,000"
+                            checked={monthyRevenue === "more than $100,000" ? true : false}
                             onChange={(e) => {
                               setMonthyRevenue(e.target.value);
                             }}
@@ -390,6 +403,7 @@ export default function Form() {
                           </label>
                         </div>
                         <label>3. Last Tax Return</label>
+                        <p className="c-info__paragraph">Select most recent business income taxt filling</p>
                         <div className="company__info--input__list">
                           <input
                             type="radio"
@@ -397,6 +411,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="year"
                             value="2021"
+                            checked={lastTaxReturn === "2021" ? true : false}
                             onChange={(e) => {
                               setLastTaxReturn(e.target.value);
                             }}
@@ -411,6 +426,7 @@ export default function Form() {
                             type="radio"
                             id="year-2"
                             className="company__info--input__radio"
+                            checked={lastTaxReturn === "2020" ? true : false}
                             name="year"
                             value="2020"
                             onChange={(e) => {
@@ -427,6 +443,7 @@ export default function Form() {
                             type="radio"
                             id="year-3"
                             className="company__info--input__radio"
+                            checked={lastTaxReturn === "2019" ? true : false}
                             name="year"
                             value="2019"
                             onChange={(e) => {
@@ -445,6 +462,7 @@ export default function Form() {
                             className="company__info--input__radio"
                             name="year"
                             value="n/a"
+                            checked={lastTaxReturn === "n/a" ? true : false}
                             onChange={(e) => {
                               setLastTaxReturn(e.target.value);
                             }}
