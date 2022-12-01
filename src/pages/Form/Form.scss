@@ -1,0 +1,21 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/reset' as *;
+
+.form-main{
+    flex-grow: 1;
+}
+
+.form-wrapper{
+    display: flex;
+    margin-left: 80px;
+}
+
+.form-main-wrapper{
+    margin-left: 80px;
+}
+
+input[type="text"] {
+    padding-left: 1rem;
+}

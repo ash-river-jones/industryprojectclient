@@ -1,0 +1,184 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/reset' as *;
+
+
+.c-info {
+    // display: flex;
+    // flex-direction: column;
+    padding-left: 1rem;
+
+
+    &__subheader {
+        // @include dt-h2;
+        // padding-left: 1rem;
+        padding-bottom: .5rem;
+        padding-top: 2rem;
+        @include form-subheader;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+
+    &__paragraph {
+        padding-top: .5rem;
+        width: 90%;
+        @include form-body;
+
+    }
+
+    &__form-label {
+
+        // @include dt-h3;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        color: #000000;
+        // padding-bottom: 1rem;
+    }
+
+    &__form-label-country {
+
+        // @include dt-h3;
+
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        // display: flex;
+        // padding-bottom: 1rem;
+    }
+   
+
+        &__form-input-name {
+            width: 32.625rem;
+            background-color: #F7F8FA;
+            height: 3.5rem;
+            border: none;
+            border-radius: .5rem;
+            margin-top: 1rem;
+        }
+
+        &__form-input-phone {
+            width: 32.625rem;
+            background-color: #F7F8FA;
+            height: 3.5rem;
+            border: none;
+            border-radius: .5rem;
+            margin-top: 1rem;
+        }
+
+
+        &__wrper-country {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        &__form-input-country {
+            border-radius: 2.5rem;
+            width: 12.3125rem;
+            background-color: #F7F8FA;
+            height: 3.5rem;
+            border: none;
+            // padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        &__form-input-country-2 {
+            border-radius: 2.5rem;
+            width: 12.3125rem;
+            background-color: #F7F8FA;
+            height: 3.5rem;
+            border: none;
+            // padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+
+        &__form-country {
+            display: flex;
+        }
+
+        // Ratio bnts
+            
+        &__selector{
+            width:60%;
+            height:80px;
+            flex-direction: column;
+            align-items:flex-start;
+        }
+
+        &__country-label{
+            margin-top: 2rem;
+            color: #000000;
+        }
+
+        &__country-btns-wrpr{
+            margin-top: 1rem;
+            display: flex;
+            gap: 1.25rem;
+        }
+        &__selecotr-item{
+            height:3.5rem;
+            width: 12.3125rem;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        &__selector-item-radio{
+            appearance:none;
+            display:none;
+        }
+
+        &__selector-item-label{
+            padding: 1rem;
+            width: 12.3125rem;
+            border-radius: 2.5rem;
+            background-color: #F7F8FA;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition-duration:.5s;
+            transition-property: transform, color, box-shadow;
+            transform:none;
+            color: #000000;
+            cursor: pointer;
+        }
+        
+        &__selector-item-radio:checked + &__selector-item-label{
+            background-color:#F4D497;
+            transition: background-color 0.1s;
+        }
+
+
+        // Ratio bnts
+
+        &__form-label-time {
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            color: #000000;
+        }
+
+        &__form-input-time{
+            width: 32.625rem;
+            background-color: #F7F8FA;
+            height: 3.5rem;
+            border: none;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            margin-bottom: 2.8125rem;
+
+        }
+
+        &__form-input-time-combo {
+            position: relative;
+            display: inline-block;
+        }
+
+        &__form-input-time-combo:hover {
+            background-color:#F4D497;
+        }
+}

@@ -1,0 +1,35 @@
+@use './variables' as *;
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+
+@mixin page-header {
+    font-size: 1.625rem;
+    line-height: 2rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+@mixin form-subheader {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+@mixin form-body {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: #A39292;
+}

@@ -1,0 +1,90 @@
+@use '../../styles/partials/mixins' as * ;
+@use '../../styles/partials/reset' as * ;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.welcome{
+
+    &_container{
+        padding: 1rem 0;
+    }
+
+    &_title{
+        @include page-header;
+        font-weight: 700;
+        padding: 0 2rem;
+    }
+
+    &_subtitle{
+        @include form-subheader;
+        font-weight: 700;
+        margin: 1rem 2rem;
+    }
+
+    &_wrapper{
+        display: flex;
+        padding: 1rem 2rem;
+        width: 100%;
+        justify-content: space-between;
+
+        &__one{
+            width: 44%;
+            padding: 1rem 0;
+        }
+        
+        &_text{
+            @include form-subheader;
+            width: 90%;
+        }
+
+        &__list_container{
+            padding: 2rem 0 2rem 1rem;
+        }
+
+        &_item{
+            @include form-subheader;
+            width: 100%;
+            margin: 1.5rem 0;
+        }
+
+        &_faq{
+            @include form-subheader;
+            border: 2px solid $lightGrey;
+            padding: 1rem;
+            border-radius: .5rem;
+            background-color: $lightGrey;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    
+        &__two{
+            width: 55%;
+
+            &_img{
+                margin: 0 auto;
+                height: 90%;
+            }
+        }  
+    }
+    &_btn{
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 1rem 2rem;
+
+        &_container{
+            border-top:1px solid $borderline;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 2rem 9rem;
+            margin-top: 3rem;
+        }
+
+        &_span{
+            margin-right: 5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+    }
+}

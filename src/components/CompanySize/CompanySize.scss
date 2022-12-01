@@ -1,0 +1,55 @@
+@use "../../styles/partials/mixins" as *;
+
+
+
+label {
+    @include form-body;
+    user-select: none; 
+    color: black;
+    text-transform:uppercase;
+}
+
+.company__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1rem;
+    margin-block: 1rem;
+    &--header {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+}
+.company__info--input__list {
+    display: flex;
+    gap: 1rem;
+    padding-block: 1rem;
+    width: 80%;
+    flex-wrap: wrap;
+}
+.company__info--input__radio {
+    display: none;
+    &:checked + .company__info--input__label {
+        background-color:#F4D497;
+        transition: background-color .1s;
+        border: 2px solid #F4D497;
+    }
+}
+
+.company__info--input__label {
+    color: black;
+    font-size: 1rem;
+    padding: 1rem;
+    min-width: 196px;
+    background-color: #F7F8FA;
+    border: 2px solid #F7F8FA;
+    border-radius: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: fit-content;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
