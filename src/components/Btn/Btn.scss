@@ -1,0 +1,21 @@
+@use '../../styles/partials/mixins' as * ;
+@use '../../styles/partials/reset' as * ;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.btn{
+    background-color: $blue;
+    color: $white;
+    border: none;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+
+    &_icon{
+        width: 12px;
+        margin-left: .25rem;
+    }
+}
+
