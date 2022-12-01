@@ -200,7 +200,7 @@ export default function Form() {
       <div className="form-wrapper">
         <div className="form-main">
           <PageHeader />
-          <main>
+          <main className="form-main-wrapper">
             <form onSubmit={handelFormSubmit}>
               {!formPartOneDone && (
                 <section>
