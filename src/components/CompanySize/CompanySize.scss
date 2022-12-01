@@ -1,22 +1,27 @@
 @use "../../styles/partials/mixins" as *;
 
 h1 {
-    @include page-header
+    @include page-header;
 }
 
 label {
     @include form-body;
     user-select: none; 
+    color: black;
 }
+
 .company__info {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-left: 1rem;
 }
 .company__info--input__list {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-block: 1rem;
+    width: 80%;
+    flex-wrap: wrap;
 }
 .company__info--input__radio {
     display: none;
@@ -30,8 +35,8 @@ label {
 .company__info--input__label {
     color: black;
     font-size: 1rem;
-    padding-inline: 1rem;
-    padding-block: 2px;
+    padding: 1rem;
+    min-width: 196px;
     background-color: #d3d3d3;
     border: 2px solid #d3d3d3;
     border-radius: 30px;
