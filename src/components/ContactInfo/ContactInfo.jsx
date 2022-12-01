@@ -22,21 +22,6 @@ export default function ContactInfo() {
                         <input type="text" className='c-info__form-input-phone' />
                     </label>
 
-                    {/* <div className='c-info__wrper-country'> */}
-                        {/* <label htmlFor="" className='c-info__form-label-country'>3. COUNTRY
-                            <div className='c-info__wrper-country'>
-                                <input type="radio" className='c-info__form-input-country' name='selector' id='Canada'/>
-                                <input type="radio" className='c-info__form-input-country-2' name='selector' id='UnitedStates'/>
-                            </div>
-                        </label> */}
-                        
-
-                        {/* <label htmlFor="" className='c-info__form-label'>
-                            <input type="text" className='c-info__form-input-time' />
-                        </label> */}
-                        
-                    {/* </div> */}
-
                     {/* Ratio btns */}
 
                     {/* <div class="container"> */}
@@ -52,10 +37,6 @@ export default function ContactInfo() {
                                 <label for="radio2" className='c-info__selector-item-label'>United States</label>
                             </div>
                             </div>
-                            {/* <div class="selecotr-item">
-                                <input type="radio" id="radio3" name="selector" class="selector-item_radio" />
-                                <label for="radio3" class="selector-item_label">radio 3</label>
-                            </div> */}
                         </div>
                     {/* </div> */}
 
