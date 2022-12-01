@@ -550,6 +550,12 @@ export default function Form() {
                             value=""
                             className="c-info__form-input-time-combo"
                           >
+                            Pacific (UTC-8)
+                          </option>
+                          <option
+                            value=""
+                            className="c-info__form-input-time-combo"
+                          >
                             Newfoundland (UTC-3:30)
                           </option>
                           <option
@@ -575,12 +581,6 @@ export default function Form() {
                             className="c-info__form-input-time-combo"
                           >
                             Mountain (UTC-7)
-                          </option>
-                          <option
-                            value=""
-                            className="c-info__form-input-time-combo"
-                          >
-                            Pacific (UTC-8)
                           </option>
                           <option
                             value=""
