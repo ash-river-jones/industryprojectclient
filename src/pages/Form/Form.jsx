@@ -3,6 +3,7 @@ import '../../components/CompanySize/CompanySize.scss';
 import '../../components/ContactInfo/ContactInfo.scss';
 import '../../components/AccountForm/AccountForm.scss';
 import Btn from '../../components/Btn/Btn'; 
+import PageHeader from "../../components/PageHeader/PageHeader"
 
 // import ContactInfo from '../../components/ContactInfo/ContactInfo';
 // import CompanySize from '../../components/CompanySize/CompanySize';
@@ -200,6 +201,7 @@ export default function Form() {
 	return (
 		<>
 			<div className='form-wrapper'>
+				<PageHeader />
 				<main className='form-main'>
 					<form onSubmit={handelFormSubmit}>
 						{!formPartOneDone && (
@@ -273,7 +275,7 @@ export default function Form() {
 							</section>
 						)}
 						{formPartOneDone && (
-							<section>
+							<section className='account-form'>
 								<h1 className='account_title'>Create your bench account</h1>
 								<label htmlFor="first_name" className='account_label'> First Name
 									<input type="text" name='first_name' id='first_name' className='account_input' value={firstName} onChange={(e) => {setFirstName(e.target.value)}}/>
