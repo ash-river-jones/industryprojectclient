@@ -139,7 +139,7 @@ export default function Form() {
 		"password": password
 	}
 
-	function handelFormSubmit(event) {
+	const handelFormSubmit = function (event) {
 		event.preventDefault();
 
 		if (
@@ -165,6 +165,10 @@ export default function Form() {
 	}
 	
 	const [formPartOneDone, setFormPartOneDone] = useState(false)
+
+	const handelFormPartOneDone = function (event) {
+		setFormPartOneDone(true)
+	} 
 
 	return (
 		<>
