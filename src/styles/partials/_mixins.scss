@@ -12,105 +12,24 @@
     }
 }
 
-// Page Header 
-@mixin m-h1 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
-    font-weight: 600;
-}
 
-// Subheader
-@mixin m-h2 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-}
-
-// Labels, Links & Buttons
-@mixin m-h3 {
-    font-size: .8125rem;
-    line-height: 1.25rem;
-    font-weight: 600;
-}
-
-//Tabel Header
-@mixin m-h4 {
-    font-size: .6875rem;
-    line-height: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: $slate;
-}
-
-// Body Large
-@mixin m-p1 {
-    font-size: .9375rem;
-    line-height: 1.625rem;
-    font-weight: 400;
-}
-
-// Body Medium
-@mixin m-p2 {
-    font-size: .8125rem;
-    line-height: 1.25rem;
-    font-weight: 400;
-}
-
-// Body Small
-@mixin m-p3 {
-    font-size: .6875rem;
-    line-height: 1rem;
-    font-weight: 400;
-}
-
-
-// Page Header
-@mixin dt-h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    font-weight: 600;
-}
-
-// Subheader
-@mixin dt-h2 {
-    font-size: 1.5rem;
+@mixin page-header {
+    font-size: 1.625rem;
     line-height: 2rem;
-    font-weight: 600;
+    font-weight: 400;
+    color: #000000;
 }
 
-// Labels, Links & Buttons
-@mixin dt-h3 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-}
-
-// Table Header
-@mixin dt-h4 {
-    font-size: .75rem;
-    line-height: 1.125rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: $slate;
-}
-
-// Body Large
-@mixin dt-p1 {
+@mixin form-subheader {
     font-size: 1rem;
-    line-height: 1.75rem;
+    line-height: 1.25rem;
     font-weight: 400;
+    color: #000000;
 }
 
-// Body Medium
-@mixin dt-p2 {
-    font-size: .875rem;
-    line-height: 1.375rem;
+@mixin form-body {
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 400;
-}
-
-// Body Small
-@mixin dt-p3 {
-    font-size: .75rem;
-    line-height: 1.125rem;
-    font-weight: 400;
+    color: #A39292;
 }
