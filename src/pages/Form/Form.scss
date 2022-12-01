@@ -16,6 +16,10 @@
     margin-left: 80px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="password"] {
     padding-left: 1rem;
+}
+
+.c-info__form-input-time {
+    padding-inline: 1rem;
 }
