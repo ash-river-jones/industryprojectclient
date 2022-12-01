@@ -60,21 +60,25 @@ margin-inline: auto ;
             font-weight: 700;
             font-size: 1.375rem;
             line-height: 1.5625rem;
+            color: #132C5B;
         }
     
         &--body-large{
             margin-top: 1rem;
             font-size: 1.25rem;
             line-height: 1.5625rem;
+            color: #132C5B;
         }
 
         &--body-small{
             margin-top: 1rem;
             font-size: 1.125rem;
             line-height: 1.375rem;
+            color: #132C5B;
         
             &--last{
                 margin-bottom: 25.3125rem;
+                color: #132C5B;
             }
         }
     }
