@@ -131,20 +131,15 @@
         }
 
         &__selector-item-label{
-            // position:relative;
-            // height:3.5rem;
             padding: 1rem;
             width: 12.3125rem;
-            text-align:center;
             border-radius: 2.5rem;
             background-color: #F7F8FA;
-            // background-color:#AAAAAA;
-            // line-height:350%;
             display: flex;
             align-items: center;
             justify-content: center;
             transition-duration:.5s;
-            transition-property:transform, color, box-shadow;
+            transition-property: transform, color, box-shadow;
             transform:none;
             color: #000000;
             cursor: pointer;
