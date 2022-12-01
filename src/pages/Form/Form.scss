@@ -1,0 +1,16 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/reset' as *;
+
+.form-main{
+    flex-grow: 1;
+}
+
+.form-article{
+
+}
+
+.form-wrapper{
+    display: flex;
+}

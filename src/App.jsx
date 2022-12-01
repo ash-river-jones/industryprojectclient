@@ -13,7 +13,7 @@ export default function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Form />} />
           <Route path='/about' element={<About />} />
           <Route path='/form' element={<Form />} />
           <Route path='/welcome' element={<Welcome />}/>
