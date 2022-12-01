@@ -9,7 +9,7 @@
     border: none;
     border-radius: .5rem;
     text-transform: uppercase;
-    padding: .5rem 1rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
 
@@ -17,5 +17,20 @@
         width: 12px;
         margin-left: .25rem;
     }
+
+
+    &_back{ 
+        background-image: url('../../assets/Icon/back_button.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 2.5rem;
+        border: none;
+        padding: 1rem 1.5rem; 
+        margin-right: 1rem;
+    }
+}
+
+.form_btn_container{
+    display: flex;
 }
 

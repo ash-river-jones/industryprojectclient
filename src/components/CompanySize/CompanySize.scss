@@ -1,8 +1,6 @@
 @use "../../styles/partials/mixins" as *;
 
-h1 {
-    @include page-header;
-}
+
 
 label {
     @include form-body;
@@ -15,6 +13,10 @@ label {
     flex-direction: column;
     gap: 1rem;
     padding-left: 1rem;
+    &--header {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
 }
 .company__info--input__list {
     display: flex;
@@ -26,9 +28,9 @@ label {
 .company__info--input__radio {
     display: none;
     &:checked + .company__info--input__label {
-        background-color: white;
+        background-color:#F4D497;
         transition: background-color .1s;
-        border: 2px solid #d3d3d3;
+        border: 2px solid #F4D497;
     }
 }
 
