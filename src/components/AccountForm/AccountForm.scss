@@ -4,11 +4,12 @@
 @use '../../styles/partials/variables' as *;
 
 .account{
-    width: 50%;
+    width: 60%;
 
     &_title{
-        @include page_header;
+        @include page-header;
         padding: 1rem 0;
+        font-weight: 700;
     }
 
     &_label{
@@ -17,8 +18,10 @@
     }
 
     &_input{
+        display: flex;
+        flex-direction: column;
         background-color: $lightGrey;
-        width: 100%;
+        width: 70%;
         margin: 1rem 0 1.5rem;
         height:2.375rem ;
         border-radius: 10px;
@@ -28,5 +31,10 @@
 
     &_btn{
        padding: 0 1rem;
+    }
+
+    &_text{
+        @include form-body;
+        padding-bottom: 1.5rem;
     }
 }
