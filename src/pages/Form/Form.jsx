@@ -8,7 +8,7 @@ import PageHeader from "../../components/PageHeader/PageHeader";
 
 import FormArticle from "../../components/FormArticle/FormArticle";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 const { v4: uuid } = require("uuid");
 
@@ -70,6 +70,14 @@ export default function Form() {
       setCompanyNameError(true);
     }
   }, [companyName]);
+
+  useEffect(() => {
+    if (phoneNumber !== "") {
+      setPhoneNumberError(null);
+    } else {
+      setPhoneNumberError(true);
+    }
+  }, [phoneNumber]);
 
   useEffect(() => {
     if (phoneNumber !== "") {
@@ -142,8 +150,7 @@ export default function Form() {
   };
 
   const handelFormSubmit = function (event) {
-    event.preventDefault();
-
+    event.preventDefault()
     if (
       companySizeError === true ||
       monthyRevenueError === true ||
@@ -157,7 +164,6 @@ export default function Form() {
       emailError === true ||
       passwordError === true
     ) {
-      alert("The required information has not been provided");
     } else {
       console.log(formData);
       navigate("/welcome");
@@ -168,13 +174,13 @@ export default function Form() {
 
   const handelFormPartOneDone = function () {
     if (
-      companySizeError !== true ||
-      monthyRevenueError !== true ||
-      lastTaxReturnError !== true ||
-      companyNameError !== true ||
-      phoneNumberError !== true ||
-      countryError !== true ||
-      timeZoneError !== true
+      companySizeError === true ||
+      monthyRevenueError === true ||
+      lastTaxReturnError === true ||
+      companyNameError === true ||
+      phoneNumberError === true ||
+      countryError === true ||
+      timeZoneError === true
     ) {
       setFormPartOneDone(true);
     } else {
@@ -185,13 +191,6 @@ export default function Form() {
 
   const handelFormPartTwoBack = function () {
     setFormPartOneDone(false);
-    setCompanySize(companySize);
-    setMonthyRevenue(monthyRevenue);
-    setLastTaxReturn(lastTaxReturn);
-    setCompanyName(companyName);
-    setPhoneNumber(phoneNumber);
-    setCountry(country);
-    setTimeZone(timeZone);
   };
 
 
@@ -201,7 +200,7 @@ export default function Form() {
         <div className="form-main">
           <PageHeader />
           <main>
-            <form onSubmit={handelFormSubmit}>
+            <form>
               {!formPartOneDone && (
                 <section>
                   <section className="company-size">
@@ -479,25 +478,6 @@ export default function Form() {
                     </div>
                   </section>
                   <section className="contact-info">
-                    {/* <div className='c-info'>
-                        <h2 className='c-info__subheader'>Contact</h2>
-                        <label htmlFor="companyname" className='c-info__form-label'>1. Company Name
-                          <input type="text" className='c-info__form-input-name' value={companyName} onChange={(e) => {setCompanyName(e.target.value)}}/>
-                        </label>
-                        <label htmlFor="" className='c-info__form-label'>2. Phone Number
-                          <input type="text" className='c-info__form-input-phone' value={phoneNumber} onChange={(e) => {setPhoneNumber(e.target.value)}}/>
-                        </label>
-                        <div className='c-info__wrper-labels'>
-                          <label htmlFor="" className='c-info__form-label'>3. Country
-                            <input type="text" className='c-info__form-input-country' value={country} onChange={(e) => {setCountry(e.target.value)}}/>
-                          </label>
-                          <label htmlFor="" className='c-info__form-label'>2. Phone Number
-                            <input type="text" className='c-info__form-input-phone' value={phoneNumber} onChange={(e) => {setPhoneNumber(e.target.value)}}/>
-                          </label>
-
-                        </div>
-
-                    </div> */}
                     <div className="c-info">
                       {/* <form action="" className='c-info__form'>                 */}
                       <h2 className="c-info__subheader">
@@ -513,12 +493,12 @@ export default function Form() {
 
                       <label htmlFor="" className="c-info__form-label">
                         1. COMPANY NAME
-                        <input type="text" className="c-info__form-input-name" />
+                        <input type="text" className="c-info__form-input-name" value={companyName} onChange={(e)=>{setCompanyName(e.target.value)}}/>
                       </label>
 
                       <label htmlFor="" className="c-info__form-label">
                         2. PHONE NUMBER
-                        <input type="text" className="c-info__form-input-phone" />
+                        <input type="text" className="c-info__form-input-phone" value={phoneNumber} onChange={(e)=>{setPhoneNumber(e.target.value)}}/>
                       </label>
 
                       {/* Ratio btns */}
@@ -534,9 +514,12 @@ export default function Form() {
                               name="selector"
                               className="c-info__selector-item-radio"
                               checked
+                              onChange={(e) => {
+                                setCountry(e.target.value);
+                              }}
                             />
                             <label
-                              for="radio1"
+                              htmlFor="radio1"
                               className="c-info__selector-item-label"
                             >
                               Canada
@@ -548,9 +531,12 @@ export default function Form() {
                               id="radio2"
                               name="selector"
                               className="c-info__selector-item-radio"
+                              onChange={(e) => {
+                                setCountry(e.target.value);
+                              }}
                             />
                             <label
-                              for="radio2"
+                              htmlFor="radio2"
                               className="c-info__selector-item-label"
                             >
                               United States
@@ -623,6 +609,7 @@ export default function Form() {
               {formPartOneDone && (
                 <section className="account-form">
                   <h1 className="account_title">Create your bench account</h1>
+                  <p className='account_text'>Review your account details and create a password</p>
                   <label htmlFor="first_name" className="account_label">
                     {" "}
                     First Name
@@ -683,9 +670,10 @@ export default function Form() {
                     />
                     <div></div>
                   </label>
+                  <p className='account_text'>by signing up you accept our <a href='https://bench.co/terms/'>End User License Agreement and Terms of Service</a></p>
                   <div className='form_btn_container'>
                     <button className="btn_back" onClick={handelFormPartTwoBack}></button>
-                    <Btn onClick={() => {navigate('/welcome')}} text="Next" class_name="account_btn" />
+                    <Btn onClick={()=>{navigate('/welcome')}} text="Next" class_name="account_btn" />
                   </div>
                 </section>
               )}
