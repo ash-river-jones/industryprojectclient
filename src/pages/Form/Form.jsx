@@ -206,9 +206,10 @@ export default function Form() {
                 <section>
                   <section className="company-size">
                     <div className="company__info">
-                      <h1>Tell Us About Your Business</h1>
+                      <h1 className="company__info--header">Tell Us About Your Business</h1>
                       <div className="company__info--input">
                         <label>1. Company Size</label>
+                        <p className="c-info__paragraph">Select number of owners, employees, and contractors</p>
                         <div className="company__info--input__list">
                           <input
                             type="radio"
@@ -308,6 +309,7 @@ export default function Form() {
                           </label>
                         </div>
                         <label>2. Monthly Revenue</label>
+                        <p className="c-info__paragraph">Select average monthly revenue before deductions</p>
                         <div className="company__info--input__list">
                           <input
                             type="radio"
@@ -391,6 +393,7 @@ export default function Form() {
                           </label>
                         </div>
                         <label>3. Last Tax Return</label>
+                        <p className="c-info__paragraph">Select most recent business income taxt filling</p>
                         <div className="company__info--input__list">
                           <input
                             type="radio"
