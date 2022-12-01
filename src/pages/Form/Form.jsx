@@ -197,6 +197,7 @@ export default function Form() {
     setTimeZone(timeZone);
   };
 
+
   return (
     <>
       <div className="form-wrapper">
@@ -474,9 +475,10 @@ export default function Form() {
 												<label htmlFor="" className='c-info__form-label'>3. Country
 													<input type="text" className='c-info__form-input-country' value={country} onChange={(e) => {setCountry(e.target.value)}}/>
 												</label>
-												<label htmlFor="" className='c-info__form-label'>3. Time zone
-													<input type="text" className='c-info__form-input-time' value={timeZone} onChange={(e) => {setTimeZone(e.target.value)}}/>
+												<label htmlFor="" className='c-info__form-label'>2. Phone Number
+													<input type="text" className='c-info__form-input-phone' value={phoneNumber} onChange={(e) => {setPhoneNumber(e.target.value)}}/>
 												</label>
+
 											</div>
 
 									</div> */}
