@@ -21,12 +21,12 @@ export default function ContactInfo() {
                     </label>
 
                     <div className='c-info__wrper-labels'>
-                        <label htmlFor="" className='c-info__form-label'>3. Country
+                        <label htmlFor="" className='c-info__form-label'>3. COUNTRY
                             <input type="text" className='c-info__form-input-country'/>
                         </label>
                         
 
-                        <label htmlFor="" className='c-info__form-label'>3. Time zone
+                        <label htmlFor="" className='c-info__form-label'>3. TIME ZONE
                             <input type="text" className='c-info__form-input-time' />
                         </label>
                         
