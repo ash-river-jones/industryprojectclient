@@ -3,11 +3,13 @@ import "../../components/CompanySize/CompanySize.scss";
 import "../../components/ContactInfo/ContactInfo.scss";
 import "../../components/AccountForm/AccountForm.scss";
 import Btn from "../../components/Btn/Btn";
+
 import PageHeader from "../../components/PageHeader/PageHeader";
 
 // import ContactInfo from '../../components/ContactInfo/ContactInfo';
 // import CompanySize from '../../components/CompanySize/CompanySize';
 // import AccountForm from '../../components/AccountForm/AccountForm';
+import backIcon from '../../assets/Icon/back_button.svg';
 import FormArticle from "../../components/FormArticle/FormArticle";
 
 import { useNavigate, Link } from "react-router-dom";
@@ -667,8 +669,9 @@ export default function Form() {
                   />
                   <div></div>
                 </label>
-                <div onClick={handelFormPartTwoBack}>
-                  <Btn text="Next" class_name="account_btn" />
+                <div onClick={handelFormPartTwoBack} className='form_btn_container'>
+					<button className="btn_back"></button>
+                  	<Btn text="Next" class_name="account_btn" />
                 </div>
               </section>
             )}
