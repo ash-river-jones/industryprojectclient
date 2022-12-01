@@ -1,5 +1,6 @@
 import './Form.scss';
 import FormCard from '../../components/FormCard/FormCard';
+import ContactInfo from '../../components/ContactInfo/ContactInfo';
 
 export default function Form() {
 	
@@ -9,6 +10,7 @@ export default function Form() {
 		<div>
 			
 			<FormCard />
+			<ContactInfo />
 			
 		</div>
 	);
