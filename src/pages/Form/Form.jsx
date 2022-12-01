@@ -550,49 +550,49 @@ export default function Form() {
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Pacific (UTC-8)
+                            Pacific
                           </option>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Newfoundland (UTC-3:30)
+                            Newfoundland
                           </option>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Atlantic (UTC-4)
+                            Atlantic
                           </option>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Eastern (UTC-5)
+                            Eastern
                           </option>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Central (UTC-6)
+                            Central
                           </option>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Mountain (UTC-7)
+                            Mountain
                           </option>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Alaska (UTC-9)
+                            Alaska
                           </option>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
                           >
-                            Hawaii-Aleutian (UTC-10)
+                            Hawaii
                           </option>
                         </select>
                       </label>
