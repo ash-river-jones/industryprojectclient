@@ -9,14 +9,14 @@
     // flex-direction: column;
 
     &__subheader {
-        @include dt-h2;
+        @include form-subheader;
         padding-left: 1rem;
        
     }
 
     &__form-label {
 
-        @include dt-h3;
+        @include form-body;
         display: flex;
         flex-direction: column;
         padding: 1rem;
