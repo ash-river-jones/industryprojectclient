@@ -2,3 +2,14 @@
 @use './styles/partials/mixins' as *;
 @use './styles/partials/typography' as *;
 @use './styles/partials/reset' as *;
+
+
+.b-info {
+
+    display: flex;
+
+    &__side-wrapper{
+        background-color: E5F1F1;
+
+    }
+}
