@@ -1,12 +1,13 @@
 import './Form.scss';
-import FormCard from '../../components/FormCard/FormCard';
 import ContactInfo from '../../components/ContactInfo/ContactInfo';
 import CompanySize from '../../components/CompanySize/CompanySize';
+import AccountForm from '../../components/AccountForm/AccountForm';
+import FormArticle from '../../components/FormArticle/FormArticle';
 
 import { useNavigate, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 const { v4: uuid } = require('uuid');
-const fs = require('fs');
+
 
 export default function Form() {
 	const navigate = useNavigate();
@@ -156,18 +157,35 @@ export default function Form() {
 		) {
 			console.log("The required information has not been provided")
 		} else {
-			fs.writeFileSync('../../assets/Data/data.json', JSON.stringify(formData))
+			console.log(formData)
 			alert("Welcome to Bench Accounting -- Form data has been received")
 			navigate('/')
 		}
 
 	}
 	
+	const [formPartOneDone, setFormPartOneDone] = useState(false)
+
 	return (
-		<div>
-			
-			<FormCard />
-			
-		</div>
+		<>
+			<div className='form-wrapper'>
+				<main className='form-main'>
+					{!formPartOneDone && (
+						<section>
+							<CompanySize />
+							<ContactInfo />
+						</section>
+					)}
+					{formPartOneDone && (
+						<section>
+							<AccountForm />
+						</section>
+					)}
+				</main>
+				<article className='form-article'>
+					<FormArticle />
+				</article>
+			</div>
+		</>
 	);
 }
