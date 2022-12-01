@@ -2,3 +2,8 @@
 @use './styles/partials/mixins' as *;
 @use './styles/partials/typography' as *;
 @use './styles/partials/reset' as *;
+
+* {
+    font-family: "Titillium Web";
+}
+

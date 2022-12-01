@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+
+h1 {
+    @include page-header
+}
+
+.company__info--input__list {
+    display: flex;
+    gap: 0.5rem;
+}
+.company__info--input__radio {
+    display: none;
+    &:checked + .company__info--input__label {
+        background-color: #d3d3d3;
+        transition: background-color .1s;
+    }
+}
+
+.company__info--input__label {
+    color: black;
+    font-size: 1rem;
+    padding-inline: 1rem;
+    padding-block: 2px;
+    border: 1px solid;
+    border-color: #d3d3d3;
+    border-radius: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
