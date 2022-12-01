@@ -53,7 +53,6 @@ export default function ContactInfo() {
                                 <option value="" className='c-info__form-input-time-combo'>Hawaii-Aleutian (UTC-10)</option>
                             </select>
                     </label>
-                    {/* <button></button> */}
                 </form>
 		    </div>
 		</>
