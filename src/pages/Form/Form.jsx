@@ -5,9 +5,6 @@ import "../../components/AccountForm/AccountForm.scss";
 import Btn from "../../components/Btn/Btn";
 import PageHeader from "../../components/PageHeader/PageHeader";
 
-// import ContactInfo from '../../components/ContactInfo/ContactInfo';
-// import CompanySize from '../../components/CompanySize/CompanySize';
-// import AccountForm from '../../components/AccountForm/AccountForm';
 import FormArticle from "../../components/FormArticle/FormArticle";
 
 import { useNavigate, Link } from "react-router-dom";
