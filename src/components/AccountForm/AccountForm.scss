@@ -1,0 +1,40 @@
+@use '../../styles/partials/mixins' as * ;
+@use '../../styles/partials/reset' as * ;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.account{
+    width: 60%;
+
+    &_title{
+        @include page-header;
+        padding: 1rem 0;
+        font-weight: 700;
+    }
+
+    &_label{
+        padding: 1rem .25rem;
+        text-transform: uppercase;
+    }
+
+    &_input{
+        display: flex;
+        flex-direction: column;
+        background-color: $lightGrey;
+        width: 70%;
+        margin: 1rem 0 1.5rem;
+        height:2.375rem ;
+        border-radius: 10px;
+        border: none;
+        outline: 1px solid $bg_input;
+    }
+
+    &_btn{
+       padding: 0 1rem;
+    }
+
+    &_text{
+        @include form-body;
+        padding-bottom: 1.5rem;
+    }
+}

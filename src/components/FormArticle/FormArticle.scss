@@ -1,0 +1,73 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.form-article{
+    width: 21.3125rem;
+    background-color: #E5F1F1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+
+    &__top{
+        padding-inline: 2.6875rem;
+
+        &--wrapper{
+
+        }
+    
+        &--img{
+            margin-top: 2rem;
+            max-width: 15.9375rem;
+        }
+    
+        &--message{
+
+        }
+    
+        &--title{
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+    
+        &--body{
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+        }
+
+    }
+    &__bottom{
+        padding: 2rem 2.6875rem 6rem 2.6875rem;
+
+
+        &--wrapper{
+
+        }
+    
+        &--img{
+            max-width: 15.9375rem;
+
+        }
+    
+        &--message{
+    
+        }
+    
+        &--title{
+            margin-top: 2rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 2rem;
+        }
+    
+        &--body{
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+        }
+    }
+}

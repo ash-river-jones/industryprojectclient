@@ -23,6 +23,7 @@
         padding-top: .5rem;
         width: 50%;
         @include form-body;
+
     }
 
     &__form-label {
@@ -38,6 +39,7 @@
     &__form-label-country {
 
         // @include dt-h3;
+
         display: flex;
         flex-direction: column;
         padding-top: 2rem;
