@@ -2,6 +2,7 @@ import "./Form.scss";
 import "../../components/CompanySize/CompanySize.scss";
 import "../../components/ContactInfo/ContactInfo.scss";
 import "../../components/AccountForm/AccountForm.scss";
+import "../../components/Btn/Btn.scss";
 import Btn from "../../components/Btn/Btn";
 import PageHeader from "../../components/PageHeader/PageHeader";
 
@@ -665,7 +666,8 @@ export default function Form() {
                     />
                     <div></div>
                   </label>
-                  <div onClick={handelFormPartTwoBack}>
+                  <div onClick={handelFormPartTwoBack} className='form_btn_container'>
+                    <button className="btn_back"></button>
                     <Btn text="Next" class_name="account_btn" />
                   </div>
                 </section>
