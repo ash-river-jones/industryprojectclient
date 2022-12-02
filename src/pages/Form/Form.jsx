@@ -552,7 +552,7 @@ export default function Form() {
                       <label htmlFor="" className="c-info__form-label-time">
                         3. TIME ZONE
                         {/* <input type="text" className='c-info__form-input-time' /> */}
-                        <select className="c-info__form-input-time" name="" id="">
+                        <select className="c-info__form-input-time" name="" id="" onChange={(e)=>{setTimeZone(e.target.value)}}>
                           <option
                             value=""
                             className="c-info__form-input-time-combo"
